@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 82.5%;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('./Images/banner.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    overflow: hidden;
+}
+
+.main-container {
+    position: relative;
+    height: 95vh;
+    width: 98vw;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+    animation-name: appear;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes appear {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+
+        transform: scale(1);
+    }
+}
+
+.welcome {
+    font-size: 2.7rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    /* font-weight: 900; */
+    letter-spacing: 0.4rem;
+    color: rgb(83, 82, 82);
+    animation-name: popup;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    /* animation-delay: 2s; */
+    transform: scale(0);
+}
+
+@keyframes popup {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.GDSC {
+    font-size: 5rem;
+    letter-spacing: 0.4rem;
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    color: #1D5D9B;
+    text-align: center;
+    position: relative;
+    animation-name: comeLeft;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-delay: 70ms;
+}
+
+@keyframes comeLeft {
+    0% {
+        left: -100rem;
+        transform: scale(0);
+    }
+
+    100% {
+        left: 0;
+        transform: scale(1);
+    }
+}
+
+
+.GDSC-Full {
+    font-size: 3rem;
+    letter-spacing: 1.2px;
+    color: rgb(83, 82, 82);
+    text-align: center;
+    animation-name: comeRight;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    position: relative;
+    animation-delay: 70ms;
+}
+
+@keyframes comeRight {
+    0% {
+        right: -100rem;
+        transform: scale(0);
+    }
+
+    100% {
+        right: 0;
+        transform: scale(1);
+    }
+}
+
+.lines {
+    height: 4.5rem;
+    /* width: 15rem; */
+    background-color: rgb(254, 21, 21);
+    /* border: 2px solid black; */
+    border-radius: 2.5rem;
+    position: relative;
+    transform-origin: left;
+    animation-name: full;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+    width: 0;
+}
+
+@keyframes full {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 15rem;
+    }
+}
+
+.red {
+    background-color: #f74037;
+    left: -7rem;
+    top: 7rem;
+    transform: rotate(-27deg);
+    animation-delay: 1.5s;
+}
+
+.blue {
+    background-color: #4a90f4;
+    top: 0.5rem;
+    left: -7rem;
+    transform: rotate(27deg);
+}
+
+.green {
+    background-color: #14b25f;
+    top: -2rem;
+    right: -6rem;
+    transform-origin: right;
+    transform: rotate(27deg);
+    margin-left: 4rem;
+}
+
+.yellow {
+    background-color: #ffb808;
+    top: -8.4rem;
+    right: -6.2rem;
+    transform-origin: right;
+    transform: rotate(-27deg);
+    margin-left: 4rem;
+    animation-delay: 1.5s;
+}
+
+.submit {
+    font-size: 1.3rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: rgb(83, 82, 82);
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.1s ease-in-out;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    animation-name: appearance;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    position: relative;
+}
+
+@keyframes appearance {
+    0% {
+        bottom: -130rem;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+.submit:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    transition: all 0.1s ease-in-out;
+}
+
+
+@media (max-width : 609px) {
+    .main-container {
+        position: relative;
+        min-height: 100vh;
+        min-width: 100vw;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(8px);
+        border-radius: 0.5rem;
+        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem 0;
+    }
+
+    .lines {
+        height: 4.5rem;
+        /* width: 15rem; */
+        background-color: rgb(254, 21, 21);
+        /* border: 2px solid black; */
+        border-radius: 2.5rem;
+        position: relative;
+        transform-origin: left;
+        animation-name: full;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-out;
+        animation-delay: 1s;
+        width: 0;
+    }
+
+    @keyframes full {
+        0% {
+            width: 0;
+        }
+
+        100% {
+            width: 15rem;
+        }
+    }
+
+    .red {
+        background-color: #f74037;
+        left: -7rem;
+        top: 7rem;
+        transform: rotate(-27deg);
+        animation-delay: 1.5s;
+    }
+
+    .blue {
+        background-color: #4a90f4;
+        top: 0.5rem;
+        left: -7rem;
+        transform: rotate(27deg);
+    }
+
+    .green {
+        background-color: #14b25f;
+        top: -2rem;
+        right: -6rem;
+        transform-origin: right;
+        transform: rotate(27deg);
+        margin-left: 4rem;
+    }
+
+    .yellow {
+        background-color: #ffb808;
+        top: -8.4rem;
+        right: -6.2rem;
+        transform-origin: right;
+        transform: rotate(-27deg);
+        margin-left: 4rem;
+        animation-delay: 1.5s;
+    }
+
+}
